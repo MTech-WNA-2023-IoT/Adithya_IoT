@@ -20,23 +20,7 @@ def test(client, userdata, message):
 def _on_message(client, userdata, msg):
 # 	print("Received: Topic: %s Body: %s", msg.topic, msg.payload)
 	print(msg.topic+" "+str(msg.payload))
-  
-
-#Subscribed Topics 
-def _on_connect(mqttclient, userdata, flags, rc):
-# 	print("New Client: "+str(mqttclient)+ " connected")
-# 	print(rc)
-	mqttclient.subscribe("IOT/#", qos=0)	
-  
-mqttclient.message_callback_add("IOT/test", test)
-
-mqttclient.connect(broker, port, keepalive=1, bind_address="")
-  
-mqttclient.on_connect = _on_connect
-
-mqttclient.loop_forever()
-
-
+ 
 import pymysql
 #Create a connection to MySQL Database 
 conn =pymysql.connect(database="AdithyaDB1",user="adithya",password="akm",host="localhost")
@@ -52,3 +36,17 @@ cur.execute("INSERT INTO table2(topic, mydata)VALUES(%(topic)s,%(mydata)s);",dat
 conn.commit()
 #Close the connection to the database
 conn.close()
+
+#Subscribed Topics 
+def _on_connect(mqttclient, userdata, flags, rc):
+# 	print("New Client: "+str(mqttclient)+ " connected")
+# 	print(rc)
+	mqttclient.subscribe("IOT/#", qos=0)	
+  
+mqttclient.message_callback_add("IOT/test", test)
+
+mqttclient.connect(broker, port, keepalive=1, bind_address="")
+  
+mqttclient.on_connect = _on_connect
+
+mqttclient.loop_forever()
