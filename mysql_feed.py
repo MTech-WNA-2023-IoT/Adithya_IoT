@@ -17,6 +17,7 @@ def test(client, userdata, message):
   print("userdata:"+ str(userdata))
   print("message:"+ str(message.payload)
 
+	
 def _on_message(client, userdata, msg):
 # 	print("Received: Topic: %s Body: %s", msg.topic, msg.payload)
 	print(msg.topic+" "+str(msg.payload))
