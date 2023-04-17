@@ -27,7 +27,7 @@ conn =pymysql.connect(database="AdithyaDB1",user="adithya",password="akm",host="
 #Create a MySQL Cursor to that executes the SQLs
 cur=conn.cursor()
 #Create a dictonary
-data={'topic':'sensortemp','mydata':30.0}
+data={'topic':'sensortemp','mydata':test}
 #Execute the SQL to write data to the database
 cur.execute("INSERT INTO table2(topic, mydata)VALUES(%(topic)s,%(mydata)s);",data)
 #Close the cursor
