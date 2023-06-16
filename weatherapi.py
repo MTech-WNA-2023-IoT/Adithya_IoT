@@ -2,7 +2,7 @@ import json
 from urllib.request import urlopen
 #Create user account and obtain API key from https://www.weatherapi.com
 
-url = "https://api.weatherapi.com/v1/current.json?key=c4e5b979c7e84522b7840737232905&q=kollam&aqi=no"
+url = "https://api.weatherapi.com/v1/current.json?key=52935acb939f4725a2254508231606&q=kollam&aqi=no"
 
 api_page = urlopen(url)
 api=api_page.read()
