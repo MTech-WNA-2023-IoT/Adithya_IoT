@@ -18,9 +18,9 @@ app=Flask(__name__)
 sql=MySQL()
 
 #Configure MySQL
-app.config['MYSQL_DATABASE_USER'] = 'your-mysql-username'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'your-mysql-password'
-app.config['MYSQL_DATABASE_DB'] = 'your-mysql-database'
+app.config['MYSQL_DATABASE_USER'] = 'adithya'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'akm'
+app.config['MYSQL_DATABASE_DB'] = 'AdithyaDB1'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 
 #initialise MySQL (connect to mysql)
