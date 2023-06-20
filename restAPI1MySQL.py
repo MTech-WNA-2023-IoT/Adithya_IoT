@@ -20,7 +20,7 @@ sql=MySQL()
 #Configure MySQL
 app.config['MYSQL_DATABASE_USER'] = 'adithya'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'akm'
-app.config['MYSQL_DATABASE_DB'] = 'AdithyaDB1'
+app.config['MYSQL_DATABASE_DB'] = 'weather'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 
 #initialise MySQL (connect to mysql)
