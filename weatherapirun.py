@@ -36,7 +36,7 @@ import pymysql
 #Create a connection to MySQL Database 
 conn =pymysql.connect(database="weatherAPI1",user="adithya",password="akm",host="localhost")
 sql = """
-INSERT INTO `weather_data` (`name`, `region`, `country`, `lat`, `lon`, `tz_id`, `localtime_epoch`, `localtime`,`cloud`,'temp_f', `humidity`, `pressure_in`)
+INSERT INTO `w1` (`name`, `region`, `country`, `lat`, `lon`, `tz_id`, `localtime_epoch`, `localtime`,`cloud`,'temp_c', `humidity`, `pressure_in`)
 VALUES (%s, %s, %s, %s, %s, %s, %s, %s,%s, %s,%s, %s)
 """
 # Prepare the values for the SQL statement
